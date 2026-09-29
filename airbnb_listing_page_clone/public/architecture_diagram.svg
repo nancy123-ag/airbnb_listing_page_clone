@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <rect x="20" y="20" width="1360" height="860" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="1360" height="70" rx="16" fill="#FF385C"/>
+  <rect x="20" y="60" width="1360" height="30" fill="#FF385C"/>
+  <text x="700" y="52" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Production Vacation-Rental Marketplace Architecture</text>
+  <text x="700" y="74" text-anchor="middle" fill="#ffe4ea" font-family="Arial, Helvetica, sans-serif" font-size="13">Frontend / CDN - Backend API - Search - Storage - Deployment</text>
+
+  <!-- ===== FRONTEND ===== -->
+  <rect x="50" y="110" width="1300" height="120" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="70" y="138" fill="#be123c" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">1. FRONTEND + EDGE CDN</text>
+
+  <rect x="70" y="155" width="240" height="55" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="190" y="177" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Guest Web App</text>
+  <text x="190" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">React / Next.js listing UI</text>
+
+  <rect x="330" y="155" width="240" height="55" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="450" y="177" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Host Dashboard</text>
+  <text x="450" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Calendar, pricing, inbox</text>
+
+  <rect x="590" y="155" width="240" height="55" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="710" y="177" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Global CDN / Edge</text>
+  <text x="710" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Cloudflare / Vercel, TLS, WAF</text>
+
+  <rect x="850" y="155" width="240" height="55" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="970" y="177" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Image CDN</text>
+  <text x="970" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">AVIF / WebP, responsive sizes</text>
+
+  <rect x="1110" y="155" width="220" height="55" rx="8" fill="#ffffff" stroke="#fca5a5"/>
+  <text x="1220" y="177" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">SSR / ISR cache</text>
+  <text x="1220" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Stale-while-revalidate</text>
+
+  <!-- arrow down -->
+  <line x1="700" y1="230" x2="700" y2="255" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== BACKEND ===== -->
+  <rect x="50" y="255" width="1300" height="150" rx="12" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+  <text x="70" y="283" fill="#047857" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">2. BACKEND (API GATEWAY + SERVICES)</text>
+
+  <rect x="70" y="300" width="280" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="210" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">API Gateway</text>
+  <text x="210" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Kong / Envoy</text>
+  <text x="210" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">REST + GraphQL, rate limits</text>
+
+  <rect x="370" y="300" width="180" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="460" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Auth</text>
+  <text x="460" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">OAuth2 / JWT</text>
+  <text x="460" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">OTP / SSO</text>
+
+  <rect x="570" y="300" width="180" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="660" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Listing svc</text>
+  <text x="660" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Catalog, photos</text>
+  <text x="660" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Amenities, hosts</text>
+
+  <rect x="770" y="300" width="180" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="860" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Booking svc</text>
+  <text x="860" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Calendar holds</text>
+  <text x="860" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Redis Redlock</text>
+
+  <rect x="970" y="300" width="180" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="1060" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Payments</text>
+  <text x="1060" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Auth + capture</text>
+  <text x="1060" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Host payouts</text>
+
+  <rect x="1170" y="300" width="160" height="80" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="1250" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Messaging</text>
+  <text x="1250" y="348" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Chat + push</text>
+  <text x="1250" y="366" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">WebSockets</text>
+
+  <line x1="700" y1="405" x2="700" y2="430" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== SEARCH ===== -->
+  <rect x="50" y="430" width="640" height="130" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="70" y="458" fill="#0369a1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">3. SEARCH</text>
+
+  <rect x="70" y="475" width="280" height="65" rx="8" fill="#ffffff" stroke="#38bdf8"/>
+  <text x="210" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Elasticsearch cluster</text>
+  <text x="210" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Geo radius / bbox + filters</text>
+
+  <rect x="370" y="475" width="290" height="65" rx="8" fill="#ffffff" stroke="#38bdf8"/>
+  <text x="515" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Availability index</text>
+  <text x="515" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Calendar bitmask, sub-50ms search</text>
+
+  <!-- ===== STORAGE ===== -->
+  <rect x="710" y="430" width="640" height="130" rx="12" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="730" y="458" fill="#6d28d9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">4. STORAGE</text>
+
+  <rect x="730" y="475" width="190" height="65" rx="8" fill="#ffffff" stroke="#a78bfa"/>
+  <text x="825" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">PostgreSQL</text>
+  <text x="825" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Primary + replicas</text>
+
+  <rect x="940" y="475" width="180" height="65" rx="8" fill="#ffffff" stroke="#a78bfa"/>
+  <text x="1030" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Redis</text>
+  <text x="1030" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Cache + Redlock</text>
+
+  <rect x="1140" y="475" width="190" height="65" rx="8" fill="#ffffff" stroke="#a78bfa"/>
+  <text x="1235" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">S3 / R2</text>
+  <text x="1235" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Photos + assets</text>
+
+  <line x1="700" y1="560" x2="700" y2="585" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== DEPLOYMENT ===== -->
+  <rect x="50" y="585" width="1300" height="130" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="70" y="613" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">5. DEPLOYMENT + OBSERVABILITY</text>
+
+  <rect x="70" y="630" width="300" height="65" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="220" y="655" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Kubernetes (EKS)</text>
+  <text x="220" y="675" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">HPA, multi-AZ pods</text>
+
+  <rect x="390" y="630" width="300" height="65" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="540" y="655" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">CI / CD</text>
+  <text x="540" y="675" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Blue/Green + Canary</text>
+
+  <rect x="710" y="630" width="300" height="65" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="860" y="655" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Monitoring</text>
+  <text x="860" y="675" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Prometheus, Grafana, Sentry</text>
+
+  <rect x="1030" y="630" width="300" height="65" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="1180" y="655" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Security</text>
+  <text x="1180" y="675" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">IAM, secrets, encryption</text>
+
+  <!-- Footer note -->
+  <text x="700" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#64748b">Scaling idea: CDN absorbs photo traffic, Booking uses Redis locks to avoid double-booking, Search stays fast via Elasticsearch + async index updates.</text>
+  <text x="700" y="785" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#94a3b8">Submit this SVG (or PDF export) with the take-home zip. Source: public/architecture_diagram.svg</text>
+
+  <!-- Legend -->
+  <rect x="50" y="810" width="18" height="18" rx="3" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="78" y="824" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Frontend</text>
+  <rect x="170" y="810" width="18" height="18" rx="3" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="198" y="824" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Backend</text>
+  <rect x="290" y="810" width="18" height="18" rx="3" fill="#f0f9ff" stroke="#7dd3fc"/>
+  <text x="318" y="824" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Search</text>
+  <rect x="400" y="810" width="18" height="18" rx="3" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <text x="428" y="824" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Storage</text>
+  <rect x="520" y="810" width="18" height="18" rx="3" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="548" y="824" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Deployment</text>
+</svg>
